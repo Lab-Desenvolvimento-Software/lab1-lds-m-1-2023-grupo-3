@@ -1,16 +1,13 @@
 public class Aluno extends Usuario {
     
-    
-    
-    public void MatricularCurso(Curso cursoEscolhido){
+        
+    public boolean MatricularCurso(int codigoCurso){
 }
     
-    public void MatricularDisciplina(Disciplina disciplinaEscolhida){
+    public boolean MatricularDisciplina(int codigoDisciplina){
 
     }
     
-    public void ExcluirDisciplina(){
     
-    }
 }
 
