@@ -7,19 +7,19 @@ public class Secretaria extends Usuario {
 
 
 
-    public boolean adcionarProfessor(int matricula){
+    public boolean adicionarProfessor(Professor professor){
 
     }
 
-    public boolean removerProfessor(int matricula){
+    public boolean removerProfessor(Professor matricula){
 
     }
 
-    public boolean adcionarDisciplina(int codigoDisciplina){
+    public boolean adicionarDisciplina(Disciplina disciplina){
 
     }
 
-    public boolean removerDisciplina(int codigoDisciplina){
+    public boolean removerDisciplina(Disciplina disciplina){
 
     }
 }
