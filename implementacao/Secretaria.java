@@ -1,8 +1,11 @@
 public class Secretaria extends Usuario {
     
+    
     public void gerarCurriculo(){
         
     }
+
+
 
     public boolean adcionarProfessor(int matricula){
 
