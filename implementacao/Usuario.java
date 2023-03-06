@@ -1,4 +1,5 @@
 public class Usuario {
+    private int numMatricula;
     private String nome;
     private int cpf;
     private String endereco;
