@@ -1,4 +1,4 @@
-public class Secretaria extends Professor {
+public class Secretaria extends Usuario {
     
     public void gerarCurriculo(){
         
