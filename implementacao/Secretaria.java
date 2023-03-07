@@ -22,4 +22,11 @@ public class Secretaria extends Usuario {
     public boolean removerDisciplina(Disciplina disciplina){
 
     }
+    public boolean adicionarAluno(Aluno aluno){
+
+    }
+
+    public boolean removerAluno(Aluno aluno){
+
+    }
 }
