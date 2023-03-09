@@ -8,8 +8,20 @@ public abstract class Usuario {
     private String email;
     private String senha;
 
+    Usuario(int numMatricula, String nome, int cpf, String endereco, int telefone, char tipoUsuario, String email, String senha){
+        this.numMatricula = numMatricula;
+        this.nome = nome;
+        this.cpf = cpf;
+        this.endereco = endereco;
+        this.telefone = telefone;
+        this.tipoUsuario = tipoUsuario;
+        this.senha = senha;
+    }
+
     
     public void logar(String email, String senha){
 
     }
+
+
 }
