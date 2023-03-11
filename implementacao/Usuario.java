@@ -8,14 +8,39 @@ public abstract class Usuario {
     private String email;
     private String senha;
 
-    Usuario(int numMatricula, String nome, int cpf, String endereco, int telefone, char tipoUsuario, String email, String senha){
+    public Usuario(int numMatricula, String nome, int cpf, String endereco, int telefone, char tipoUsuario, String email, String senha){
         this.numMatricula = numMatricula;
         this.nome = nome;
         this.cpf = cpf;
         this.endereco = endereco;
         this.telefone = telefone;
         this.tipoUsuario = tipoUsuario;
+        this.email = email;
         this.senha = senha;
+    }
+
+    public void addUsuario(Usuario){
+        Scanner entrada = new Scanner(System.in);
+        system.out.println("Digite 'a' se o novo usuário for um aluno, 'p' se o novo usuário for um professor e 's' se o novo usuário for uma secretária:");
+
+        system.out.println("Informe o nome do usuário:");
+
+        system.out.println("Informe o cpf do usuário:");
+
+        system.out.println("Informe o endereço do usuário:");
+
+        system.out.println("Informe o telefone do usuário:");
+
+        system.out.println("Informe o e-mail do usuário:");
+
+        system.out.println("Cadastre a senha do usuário:");
+
+
+
+
+
+
+
     }
 
     

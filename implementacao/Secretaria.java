@@ -24,6 +24,7 @@ public class Secretaria extends Usuario {
 
     }
     public boolean adicionarAluno(Aluno aluno){
+        
 
     }
 
