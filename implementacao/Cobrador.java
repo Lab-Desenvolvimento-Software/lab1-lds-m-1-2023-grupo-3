@@ -1,7 +1,7 @@
-public class Cobrador {
+public interface Cobrador {
     
 
-    public void cobrar(String email){
+    public default void cobrar(String email){
 
     }
 
