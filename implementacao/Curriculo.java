@@ -1,4 +1,7 @@
+import java.util.LinkedList;
+
 public class Curriculo 
 {
-    private Disciplina[] disciplinas;
+    private LinkedList<Disciplina> disciplinas = new LinkedList<Disciplina>();
+
 }
