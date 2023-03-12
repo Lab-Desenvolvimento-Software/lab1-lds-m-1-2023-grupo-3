@@ -17,9 +17,9 @@ public class Menu {
         System.out.println("14. Remover aluno de uma disciplina");
         System.out.println("15. Consultar alunos de uma disciplina");
         System.out.println("16. Consultar alunos de um curso");
-        System.out.println("15. Consultar alunos de uma disciplina");
-        System.out.println("16. Gerar currículo");
-        System.out.println("17. Finalizar Sistema");
+        System.out.println("17. Consultar alunos de uma disciplina");
+        System.out.println("18. Gerar currículo");
+        System.out.println("19. Finalizar Sistema");
         System.out.println();
         System.out.println("Digite a opção desejada:");
 

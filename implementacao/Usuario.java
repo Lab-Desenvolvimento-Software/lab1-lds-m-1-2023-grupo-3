@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public abstract class Usuario {
     private int numMatricula;
     private String nome;
@@ -34,26 +36,31 @@ public abstract class Usuario {
     //}
 
     public static void addUsuario(){
-        Usuario us = new Usuario();
-        
-        {
-            
-        };
+        Scanner ler = new Scanner(System.in);
 
-        Scanner entrada = new Scanner(System.in);
-        system.out.println("Digite 'a' se o novo usuário for um aluno, 'p' se o novo usuário for um professor e 's' se o novo usuário for uma secretária:");
+        System.out.println("Informe o nome do usuário:");
+        String nome = ler.nextLine();
 
-        system.out.println("Informe o nome do usuário:");
+        System.out.println("Informe o cpf do usuário:");
+        int cpf = ler.nextInt(); 
 
-        system.out.println("Informe o cpf do usuário:");
+        System.out.println("Informe o endereço do usuário:");
+        String endereco = ler.nextLine();
 
-        system.out.println("Informe o endereço do usuário:");
+        System.out.println("Informe o telefone do usuário:");
+        int telefone = ler.nextInt(); 
 
-        system.out.println("Informe o telefone do usuário:");
+        System.out.println("Digite 'a' se o novo usuário for um aluno, 'p' se o novo usuário for um professor e 's' se o novo usuário for uma secretária:");
+        char tipoUsuario = (char)System.in.read();
 
-        system.out.println("Informe o e-mail do usuário:");
+        System.out.println("Informe o e-mail do usuário:");
+        String email = ler.nextLine();
 
-        system.out.println("Cadastre a senha do usuário:");
+        System.out.println("Cadastre a senha do usuário:");
+        String senha = ler.nextLine();
+
+        Usuario usuario = new Usuario(numMatricula, nome, cpf, endereco, telefone, tipoUsuario, email, senha);
+
     }
 
     public static void excluirUsuario(){
