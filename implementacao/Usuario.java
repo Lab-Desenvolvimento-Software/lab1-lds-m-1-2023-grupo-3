@@ -19,7 +19,27 @@ public abstract class Usuario {
         this.senha = senha;
     }
 
-    public void addUsuario(Usuario){
+    public Usuario(){
+        this.numMatricula = 0;
+        this.nome = "nome";
+        this.cpf = 0;
+        this.endereco = "endereco";
+        this.telefone = 0;
+        this.tipoUsuario = 'c';
+        this.email = "email";
+        this.senha = "senha";
+    }
+
+    //public void addUsuario(Usuario){
+    //}
+
+    public static void addUsuario(){
+        Usuario us = new Usuario();
+        
+        {
+            
+        };
+
         Scanner entrada = new Scanner(System.in);
         system.out.println("Digite 'a' se o novo usuário for um aluno, 'p' se o novo usuário for um professor e 's' se o novo usuário for uma secretária:");
 
@@ -34,12 +54,9 @@ public abstract class Usuario {
         system.out.println("Informe o e-mail do usuário:");
 
         system.out.println("Cadastre a senha do usuário:");
+    }
 
-
-
-
-
-
+    public static void excluirUsuario(){
 
     }
 
