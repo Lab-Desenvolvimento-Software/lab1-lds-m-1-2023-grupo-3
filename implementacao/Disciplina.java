@@ -7,11 +7,13 @@ public class Disciplina {
     private LinkedList<Professor> professores;
     private String nome;
     private boolean isOptativa;
+    public static LinkedList<Disciplina> disciplinas;
 
     Disciplina (int codigoDisciplina, String nome, boolean isOptativa) {
         this.codigoDisciplina = codigoDisciplina;
         this.nome = nome;
         this.isOptativa = isOptativa;
+        disciplinas.add(this);
     }
 
 
@@ -24,7 +26,7 @@ public class Disciplina {
         return professores;
     }
 
-    public boolean adicionarProfessor(Disciplina disciplina, Professor professor){
+    public boolean adicionarProfessor(Professor professor){
         professores.add(professor);
         return true;
     }
