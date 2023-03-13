@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
-public class Aplicacao {      
-    public static void main(String[] args){
+public class Aplicacao {
+    public static void main(String[] args) {
         int entrada, temp;
         Curso cur;
         Boolean isAtivo = true;
@@ -21,7 +21,7 @@ public class Aplicacao {
         matematica.adicionarProfessor(prof1);
         matematica.adicionarAluno(aluno1);
         matematica.adicionarAluno(aluno2);
-        
+
         portugues.adicionarProfessor(prof2);
         portugues.adicionarAluno(aluno1);
         portugues.adicionarAluno(aluno2);
@@ -31,148 +31,132 @@ public class Aplicacao {
         historia.adicionarAluno(aluno1);
         historia.adicionarAluno(aluno2);
 
-        while (isAtivo){
+        while (isAtivo) {
             menu();
             entrada = ler.nextInt();
             Scanner info = new Scanner(System.in);
-            switch(entrada){
+            switch (entrada) {
                 case 1:
-                System.out.println("Opção 01: Cadastrar usuário\n");
-                Usuario.cadastrarUsuario();               
-                break;
+                    System.out.println("Opção 01: Cadastrar usuário\n");
+                    Usuario.cadastrarUsuario();
+                    break;
 
                 case 2:
-                System.out.println("Opção 02: Excluir usuário\n");
-                for (int i=0; i<Secretaria.usuarios.size(); i++){
-                    System.out.println(i + " nome: " + Secretaria.usuarios.get(i).nome);
-                }
-                System.out.println(": ");
-                temp = info.nextInt();
-                Secretaria.usuarios.remove(temp);
-                break;
+                    System.out.println("Opção 02: Excluir usuário\n");
+                    Usuario.excluirUsuario();
+                    break;
 
                 case 3:
-                String nomeCurso;
-                int creditos, codigo;
-                System.out.println("Opção 03: Adicionar curso");
-                System.out.println("informe o nome do curso: ");
-                nomeCurso = info.nextLine();
-                System.out.println("informe o código do curso: ");
-                codigo = info.nextInt();
-                System.out.println("informe quantos créditos o curso tem: ");
-                creditos = info.nextInt();
-                break;
+                    System.out.println("Opção 03: Adicionar curso");
+                    Curso.adicionarCurso();
+                    break;
 
                 case 4:
-                System.out.println("04: Excluir curso");
-                for (int i=0; i<Curso.cursos.size(); i++){
-                    System.out.println(i + " nome: " + Curso.cursos.get(i).nome);
-                }
-                temp = info.nextInt();
-                Curso.cursos.remove(temp);
-                break;
+                    System.out.println("04: Excluir curso");
+                    Curso.excluirCurso();
+                    break;
 
                 case 5:
-                System.out.println("05. Consultar cursos");
-                for (int i=0; i<Curso.cursos.size(); i++){
-                    System.out.println(i + " nome: " + Curso.cursos.get(i).nome);
-                }
-                break;
+                    System.out.println("05. Consultar cursos");
+                    for (int i = 0; i < Curso.cursos.size(); i++) {
+                        System.out.println(i + " nome: " + Curso.cursos.get(i).nome);
+                    }
+                    break;
 
                 case 6:
-                System.out.println("06. Adicionar disciplina em um curso");
-                System.out.println("Decida em qual curso adicionar a disciplina: ");
-                for (int i=0; i<Curso.cursos.size(); i++){
-                    System.out.println(i + " nome: " + Curso.cursos.get(i).nome);
-                }
-                temp = info.nextInt();
-                cur = Curso.cursos.get(temp);
-                System.out.println("Escolha a disciplina: ");
-                for(int i=0; i<Disciplina.disciplinas.size(); i++){
-                    System.out.println(i + " nome: " + Disciplina.disciplinas.get(i));
-                }
-                temp = info.nextInt();
-                cur.adicionarDisciplina(Disciplina.disciplinas.get(temp));
-                break;
+                    System.out.println("06. Adicionar disciplina em um curso");
+                    System.out.println("Decida em qual curso adicionar a disciplina: ");
+                    for (int i = 0; i < Curso.cursos.size(); i++) {
+                        System.out.println(i + " nome: " + Curso.cursos.get(i).nome);
+                    }
+                    temp = info.nextInt();
+                    cur = Curso.cursos.get(temp);
+                    System.out.println("Escolha a disciplina: ");
+                    for (int i = 0; i < Disciplina.disciplinas.size(); i++) {
+                        System.out.println(i + " nome: " + Disciplina.disciplinas.get(i));
+                    }
+                    temp = info.nextInt();
+                    cur.adicionarDisciplina(Disciplina.disciplinas.get(temp));
+                    break;
 
                 case 7:
-                System.out.println("07. Excluir disciplina de um curso");
-                System.out.println("Decida em qual curso excluir a disciplina: ");
-                for (int i=0; i<Curso.cursos.size(); i++){
-                    System.out.println(i + " nome: " + Curso.cursos.get(i).nome);
-                }
-                temp = info.nextInt();
-                cur = Curso.cursos.get(temp);
-                System.out.println("Escolha a disciplina: ");
-                for(int i=0; i<Disciplina.disciplinas.size(); i++){
-                    System.out.println(i + " nome: " + Disciplina.disciplinas.get(i));
-                }
-                temp = info.nextInt();
-                Disciplina.disciplinas.remove(temp);
-                break;
+                    System.out.println("07. Excluir disciplina de um curso");
+                    System.out.println("Decida em qual curso excluir a disciplina: ");
+                    for (int i = 0; i < Curso.cursos.size(); i++) {
+                        System.out.println(i + " nome: " + Curso.cursos.get(i).nome);
+                    }
+                    temp = info.nextInt();
+                    cur = Curso.cursos.get(temp);
+                    System.out.println("Escolha a disciplina: ");
+                    for (int i = 0; i < Disciplina.disciplinas.size(); i++) {
+                        System.out.println(i + " nome: " + Disciplina.disciplinas.get(i));
+                    }
+                    temp = info.nextInt();
+                    Disciplina.disciplinas.remove(temp);
+                    break;
 
                 case 8:
-                System.out.println("08. Consultar disciplinas de um curso");
-                for (int i=0; i<Curso.cursos.size(); i++){
-                    System.out.println(i + " nome: " + Curso.cursos.get(i).nome);
-                }
-                break;
+                    System.out.println("08. Consultar disciplinas de um curso");
+                    for (int i = 0; i < Curso.cursos.size(); i++) {
+                        System.out.println(i + " nome: " + Curso.cursos.get(i).nome);
+                    }
+                    break;
 
                 case 9:
-                System.out.println("09. Adicionar professor em uma disciplina");
-                // System.out.println("Escolha a disciplina: ");
-                // for(int i=0; i<Disciplina.disciplinas.size(); i++){
-                //     System.out.println(i + " nome: " + Disciplina.disciplinas.get(i));
-                // }
-                // temp = info.nextInt();
-                
-                // System.out.println("Escolha o professor: ");
-                // for(int i=0; i<Disciplina.disciplinas.size(); i++){
-                //     System.out.println(i + " nome: " + Disciplina.disciplinas.get(i));
-                // }
-                // temp = info.nextInt();
-                // cur.adicionarDisciplina(Disciplina.disciplinas.get(temp));
-                break;
+                    System.out.println("09. Adicionar professor em uma disciplina");
+                    // System.out.println("Escolha a disciplina: ");
+                    // for(int i=0; i<Disciplina.disciplinas.size(); i++){
+                    // System.out.println(i + " nome: " + Disciplina.disciplinas.get(i));
+                    // }
+                    // temp = info.nextInt();
+
+                    // System.out.println("Escolha o professor: ");
+                    // for(int i=0; i<Disciplina.disciplinas.size(); i++){
+                    // System.out.println(i + " nome: " + Disciplina.disciplinas.get(i));
+                    // }
+                    // temp = info.nextInt();
+                    // cur.adicionarDisciplina(Disciplina.disciplinas.get(temp));
+                    break;
 
                 case 10:
 
-                break;
+                    break;
 
                 case 11:
 
-                break;
+                    break;
 
                 case 12:
 
-                break;
+                    break;
 
                 case 13:
 
-                break;
+                    break;
 
                 case 14:
 
-                break;
+                    break;
 
                 case 15:
 
-                break;
+                    break;
 
                 case 16:
 
-                break;
+                    break;
 
                 case 17:
 
-                break;
+                    break;
 
                 case 18:
 
-                break;
+                    break;
 
                 case 19:
 
-                break;
+                    break;
 
                 default:
                     System.out.println("Comando inválido");
@@ -181,32 +165,29 @@ public class Aplicacao {
         }
     }
 
-        public static void menu(){
-            System.out.println("\n\tMenu");
-            System.out.println("01. Cadastrar usuário");
-            System.out.println("02. Excluir usuário");
-            System.out.println("03. Adicionar curso");
-            System.out.println("04. Excluir curso");
-            System.out.println("05. Consultar cursos");
-            System.out.println("06. Adicionar disciplina em um curso");
-            System.out.println("07. Excluir disciplina de um curso");
-            System.out.println("08. Consultar disciplinas de um curso");
-            System.out.println("09. Adicionar professor em uma disciplina");
-            System.out.println("10. Remover professor de uma disciplina");
-            System.out.println("11. Consultar professor(es) de um curso");
-            System.out.println("12. Consultar professor(es) de uma disciplina");
-            System.out.println("13. Matricular aluno em uma disciplina");
-            System.out.println("14. Remover aluno de uma disciplina");
-            System.out.println("15. Consultar alunos de uma disciplina");
-            System.out.println("16. Consultar alunos de um curso");
-            System.out.println("17. Consultar alunos de uma disciplina");
-            System.out.println("18. Gerar currículo");
-            System.out.println("19. Finalizar Sistema");
-            System.out.println();
-            System.out.println("Digite a opção desejada:");
+    public static void menu() {
+        System.out.println("\n\tMenu");
+        System.out.println("01. Cadastrar usuário");
+        System.out.println("02. Excluir usuário");
+        System.out.println("03. Adicionar curso");
+        System.out.println("04. Excluir curso");
+        System.out.println("05. Consultar cursos");
+        System.out.println("06. Adicionar disciplina em um curso");
+        System.out.println("07. Excluir disciplina de um curso");
+        System.out.println("08. Consultar disciplinas de um curso");
+        System.out.println("09. Adicionar professor em uma disciplina");
+        System.out.println("10. Remover professor de uma disciplina");
+        System.out.println("11. Consultar professor(es) de um curso");
+        System.out.println("12. Consultar professor(es) de uma disciplina");
+        System.out.println("13. Matricular aluno em uma disciplina");
+        System.out.println("14. Remover aluno de uma disciplina");
+        System.out.println("15. Consultar alunos de uma disciplina");
+        System.out.println("16. Consultar alunos de um curso");
+        System.out.println("17. Consultar alunos de uma disciplina");
+        System.out.println("18. Gerar currículo");
+        System.out.println("19. Finalizar Sistema");
+        System.out.println();
+        System.out.println("Digite a opção desejada:");
     }
 
-    
 }
-
-    
