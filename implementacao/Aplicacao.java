@@ -140,11 +140,26 @@ public class Aplicacao {
                 break;
 
                 case 8:
-
+                System.out.println("08. Consultar disciplinas de um curso");
+                for (int i=0; i<Curso.cursos.size(); i++){
+                    System.out.println(i + " nome: " + Curso.cursos.get(i).nome);
+                }
                 break;
 
                 case 9:
-
+                System.out.println("09. Adicionar professor em uma disciplina");
+                // System.out.println("Escolha a disciplina: ");
+                // for(int i=0; i<Disciplina.disciplinas.size(); i++){
+                //     System.out.println(i + " nome: " + Disciplina.disciplinas.get(i));
+                // }
+                // temp = info.nextInt();
+                
+                // System.out.println("Escolha o professor: ");
+                // for(int i=0; i<Disciplina.disciplinas.size(); i++){
+                //     System.out.println(i + " nome: " + Disciplina.disciplinas.get(i));
+                // }
+                // temp = info.nextInt();
+                // cur.adicionarDisciplina(Disciplina.disciplinas.get(temp));
                 break;
 
                 case 10:

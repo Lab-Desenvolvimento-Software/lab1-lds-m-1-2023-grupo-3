@@ -5,8 +5,8 @@ public class Curso {
     private int codigoCurso;
     private int creditos;
     public String nome;
-    public LinkedList<Disciplina> disciplinas;
-    public static LinkedList<Curso> cursos;
+    public LinkedList<Disciplina> disciplinas= new LinkedList<Disciplina>();
+    public static LinkedList<Curso> cursos = new LinkedList<Curso>();
 
     Curso (int codigoCurso, int creditos, String nome){
         this.codigoCurso = codigoCurso;
