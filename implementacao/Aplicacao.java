@@ -38,35 +38,7 @@ public class Aplicacao {
             switch(entrada){
                 case 1:
                 System.out.println("Opção 01: Cadastrar usuário\n");
-                int numMatricula, cpf , telefone; 
-                String email, senha, nome, endereco;
-                char tipoUsuario;
-
-                System.out.println("Digite 'a' se o novo usuário for um aluno, 'p' se o novo usuário for um professor e 's' se o novo usuário for uma secretária:");
-                tipoUsuario = info.next().charAt(0);
-
-                System.out.println("Informe o número de matrícula do usuário:");
-                numMatricula = info.nextInt();
-
-                System.out.println("Informe o nome do usuário:");
-                nome = info.nextLine();
-
-                System.out.println("Informe o cpf do usuário:");
-                cpf = info.nextInt();
-        
-                System.out.println("Informe o endereço do usuário:");
-                endereco = info.nextLine();
-        
-                System.out.println("Informe o telefone do usuário:");
-                telefone = info.nextInt();
-
-                System.out.println("Informe o e-mail do usuário:");
-                email = info.nextLine();
-        
-                System.out.println("Cadastre a senha do usuário:");
-                senha = info.nextLine();
-
-                Secretaria.criarUsuario(numMatricula, nome, cpf, endereco, telefone, tipoUsuario, email, senha);
+                Usuario.cadastrarUsuario();               
                 break;
 
                 case 2:
@@ -92,7 +64,7 @@ public class Aplicacao {
                 break;
 
                 case 4:
-                System.out.println("04. Excluir curso");
+                System.out.println("04: Excluir curso");
                 for (int i=0; i<Curso.cursos.size(); i++){
                     System.out.println(i + " nome: " + Curso.cursos.get(i).nome);
                 }
@@ -194,6 +166,14 @@ public class Aplicacao {
 
                 break;
 
+                case 18:
+
+                break;
+
+                case 19:
+
+                break;
+
                 default:
                     System.out.println("Comando inválido");
             }
@@ -219,9 +199,9 @@ public class Aplicacao {
             System.out.println("14. Remover aluno de uma disciplina");
             System.out.println("15. Consultar alunos de uma disciplina");
             System.out.println("16. Consultar alunos de um curso");
-            System.out.println("15. Consultar alunos de uma disciplina");
-            System.out.println("16. Gerar currículo");
-            System.out.println("17. Finalizar Sistema");
+            System.out.println("17. Consultar alunos de uma disciplina");
+            System.out.println("18. Gerar currículo");
+            System.out.println("19. Finalizar Sistema");
             System.out.println();
             System.out.println("Digite a opção desejada:");
     }
