@@ -32,7 +32,8 @@ public abstract class Usuario {
         String email, senha, nome, endereco;
         char tipoUsuario;
 
-        System.out.println("Digite 'a' se o novo usuário for um aluno, 'p' se o novo usuário for um professor e 's' se o novo usuário for uma secretária:");
+        System.out.println(
+                "Digite 'a' se o novo usuário for um aluno, 'p' se o novo usuário for um professor e 's' se o novo usuário for uma secretária:");
         tipoUsuario = info.next().charAt(0);
 
         System.out.println("Informe o número de matrícula do usuário:");
@@ -58,6 +59,19 @@ public abstract class Usuario {
 
         Secretaria.criarUsuario(numMatricula, nome, cpf, endereco, telefone, tipoUsuario, email, senha);
 
+    }
+
+    public static void excluirUsuario() {
+        int temp;
+        Scanner info = new Scanner(System.in);
+
+
+        for (int i = 0; i < Secretaria.usuarios.size(); i++) {
+            System.out.println(i + " nome: " + Secretaria.usuarios.get(i).nome);
+        }
+        System.out.println(": ");
+        temp = info.nextInt();
+        Secretaria.usuarios.remove(temp);
     }
 
     public void logar(String email, String senha) {
