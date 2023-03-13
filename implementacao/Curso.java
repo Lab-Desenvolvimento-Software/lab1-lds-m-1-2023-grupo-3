@@ -4,14 +4,15 @@ public class Curso {
 
     private int codigoCurso;
     private int creditos;
-    private String nome;
-    private LinkedList<Disciplina> disciplinas;
+    public String nome;
+    public LinkedList<Disciplina> disciplinas;
+    public static LinkedList<Curso> cursos;
 
     Curso (int codigoCurso, int creditos, String nome){
         this.codigoCurso = codigoCurso;
         this.creditos = creditos;
         this.nome = nome;
-
+        cursos.add(this);
     }
     
     public LinkedList<Disciplina> consultarDisciplinas() {
@@ -21,5 +22,9 @@ public class Curso {
     public LinkedList<Disciplina> consultarProfessor(Professor prof) {
         //retorna uma lista de disciplinas que o professor leciona
         return null;
+    }
+
+    public void adicionarDisciplina(Disciplina disciplina) {
+        disciplinas.add(disciplina);
     }
 }
