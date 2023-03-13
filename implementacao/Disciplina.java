@@ -3,11 +3,11 @@ import java.util.LinkedList;
 public class Disciplina {
     
     private int codigoDisciplina;
-    private LinkedList<Aluno> alunos;
-    private LinkedList<Professor> professores;
+    private LinkedList<Aluno> alunos = new LinkedList<Aluno>();
+    private LinkedList<Professor> professores = new LinkedList<Professor>();
     private String nome;
     private boolean isOptativa;
-    public static LinkedList<Disciplina> disciplinas;
+    public static LinkedList<Disciplina> disciplinas = new LinkedList<Disciplina>();
 
     Disciplina (int codigoDisciplina, String nome, boolean isOptativa) {
         this.codigoDisciplina = codigoDisciplina;
