@@ -52,16 +52,13 @@ public class Aplicacao {
                     break;
 
                 case 4:
-                    System.out.println("04: Excluir curso");
+                    System.out.println("Opção 04: Excluir curso");
                     Curso.excluirCurso();
                     break;
 
                 case 5:
-                    System.out.println("05. Consultar cursos");
-                    for (int i = 0; i < Curso.cursos.size(); i++) {
-                        System.out.println(i + " nome: " + Curso.cursos.get(i).nome);
-                    }
-                    break;
+                    System.out.println("Opção 05: Consultar cursos");
+
 
                 case 6:
                     System.out.println("06. Adicionar disciplina em um curso");

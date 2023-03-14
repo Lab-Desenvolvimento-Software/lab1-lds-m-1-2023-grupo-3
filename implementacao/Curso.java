@@ -49,6 +49,12 @@ public class Curso {
         cursos.remove(temp);  
     }
 
+    public static void consultarCurso(){
+        for (int i = 0; i < cursos.size(); i++) {
+            System.out.println(i + " nome: " + cursos.get(i).nomeCurso);
+        }
+        break;
+    }
 
     public void adicionarDisciplina(Disciplina disciplina) {
         disciplinas.add(disciplina);
