@@ -71,14 +71,9 @@ public class Curso {
         temp = info.nextInt();
         cur.disciplinas.add(Disciplina.disciplinas.get(temp));
 
-public static void consultarCurso(){
-        for (int i = 0; i < cursos.size(); i++) {
-            System.out.println(i + " nome: " + cursos.get(i).nomeCurso);
-        }
-        break;
-    }
 
-    public void adicionarDisciplina(Disciplina dis) {
-        this.disciplinas.add(dis);
-    }
+   // public void adicionarDisciplina(Disciplina dis) {
+    //    this.disciplinas.add(dis);
+    //}
+}
 }
