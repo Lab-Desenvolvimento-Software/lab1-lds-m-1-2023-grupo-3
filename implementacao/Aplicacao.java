@@ -47,43 +47,30 @@ public class Aplicacao {
                     break;
 
                 case 3:
-                    System.out.println("Opção 03: Adicionar curso");
+                    System.out.println("Opção 03: Adicionar curso\n");
                     Curso.adicionarCurso();
                     break;
 
                 case 4:
-                    System.out.println("04: Excluir curso");
+                    System.out.println("04: Excluir curso\n");
                     Curso.excluirCurso();
                     break;
 
                 case 5:
-                    System.out.println("05. Consultar cursos");
-                    for (int i = 0; i < Curso.cursos.size(); i++) {
-                        System.out.println(i + " nome: " + Curso.cursos.get(i).nome);
-                    }
+                    System.out.println("05: Consultar cursos\n");
+                    Curso.consultarCurso();
                     break;
 
                 case 6:
-                    System.out.println("06. Adicionar disciplina em um curso");
-                    System.out.println("Decida em qual curso adicionar a disciplina: ");
-                    for (int i = 0; i < Curso.cursos.size(); i++) {
-                        System.out.println(i + " nome: " + Curso.cursos.get(i).nome);
-                    }
-                    temp = info.nextInt();
-                    cur = Curso.cursos.get(temp);
-                    System.out.println("Escolha a disciplina: ");
-                    for (int i = 0; i < Disciplina.disciplinas.size(); i++) {
-                        System.out.println(i + " nome: " + Disciplina.disciplinas.get(i));
-                    }
-                    temp = info.nextInt();
-                    cur.adicionarDisciplina(Disciplina.disciplinas.get(temp));
+                    System.out.println("06: Adicionar disciplina em um curso\n");
+                    Curso.adicionarDisciplina();
                     break;
 
                 case 7:
-                    System.out.println("07. Excluir disciplina de um curso");
+                    System.out.println("07. Excluir disciplina de um curso\n");
                     System.out.println("Decida em qual curso excluir a disciplina: ");
                     for (int i = 0; i < Curso.cursos.size(); i++) {
-                        System.out.println(i + " nome: " + Curso.cursos.get(i).nome);
+                        System.out.println(i + " nome: " + Curso.cursos.get(i).nomeCurso);
                     }
                     temp = info.nextInt();
                     cur = Curso.cursos.get(temp);
@@ -98,7 +85,7 @@ public class Aplicacao {
                 case 8:
                     System.out.println("08. Consultar disciplinas de um curso");
                     for (int i = 0; i < Curso.cursos.size(); i++) {
-                        System.out.println(i + " nome: " + Curso.cursos.get(i).nome);
+                        System.out.println(i + " nome: " + Curso.cursos.get(i).nomeCurso);
                     }
                     break;
 
